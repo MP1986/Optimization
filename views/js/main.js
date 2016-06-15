@@ -504,6 +504,9 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+
+    console.log(phase, document.body.scrollTop / 1250);
+
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -517,7 +520,11 @@ function updatePositions() {
   }
 }
 
+//Do I need to animate 200 pizzas if only a handful are showing up?
+//Figure out ways to optimize stuff.
+
 // runs updatePositions on scroll
+//Function that needs to be optimized.
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.

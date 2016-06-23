@@ -1,3 +1,5 @@
+//Left off at 9:42, Tips - Increasing Framerate
+
 /*
 Welcome to the 60fps project! Your goal is to make Cam's Pizzeria website run
 jank-free at 60 frames per second.
@@ -468,7 +470,7 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-for (var i = 2; i < 100; i++) {
+for (var i = 2; i < 40; i++) {
   var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
@@ -493,17 +495,45 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   console.log("Average scripting time to generate last 10 frames: " + sum / 10 + "ms");
 }
 
+/*
+
+function animate() {
+  
+  // Do something.
+
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+*/
+
+// Something to do with requestanimationframe?
+
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
 // Moves the sliding background pizzas based on scroll position
+
+//Below is one of the functions that must be optimized.
+
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+//  var items = document.getElementsByClass('.mover')
+
+  //Efficient way:  document.getElementsByClass()
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+
+//Store five numbers here to change the position of our elements?
+
+//Way to only re-paint the pizzas and not the whole screen?
+//Render each individual pizza in its own layers.  Use backface-visibility: hidden.
+//Pay attention to how many times DOM is selecting everything, try to reduce it?
+
+//How to reduce time for this calculation?
 
     console.log(phase, document.body.scrollTop / 1250);
 
@@ -531,7 +561,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+//Not necessary to render all 200 pizzas since only a portion show up onscreen.  Fix this.
+  for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

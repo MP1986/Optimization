@@ -19,19 +19,22 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+""1	LINE	0
+	
+	# Please enter the commit message for your changes. Lines starting
 
 # File marks:
-'0  1  16  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-mobile-portfolio-master/.git/COMMIT_EDITMSG
+'0  1  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-mobile-portfolio-master/.git/COMMIT_EDITMSG
 
 # Jumplist (newest first):
--'  1  16  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-mobile-portfolio-master/.git/COMMIT_EDITMSG
+-'  1  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-mobile-portfolio-master/.git/COMMIT_EDITMSG
 
 # History of marks within files (newest to oldest):
 
 > /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-mobile-portfolio-master/.git/COMMIT_EDITMSG
-	"	1	16
-	^	1	17
-	.	1	16
-	+	5	0
+	"	1	0
+	.	1	0
+	+	4	0
 	+	1	16
-	m	1	0
+	+	15	0
+	+	1	0

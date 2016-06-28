@@ -535,7 +535,7 @@ function updatePositions() {
 
     for (var i = 0; i < items.length; i++) {
 
-        var phase = phaseArray[i % 5];
+        var phase = phaseArray[i];
 
         console.log(phase, document.body.scrollTop / 1250);
 

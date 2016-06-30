@@ -1,156 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio!">
     <meta name="author" content="Mitch Pengilly">
     <title>Mitch Pengilly: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <!-- How do you figure out which font in the URL below is the same used in the original?  There are so many.  -->
-    <!--  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  -->
+    <!-- Removed css styling link hrefs and inlined code from them instead. See bottom.  -->
+</head>
 
-    <!--  <link href="css/print.css" rel="stylesheet" media="print">  -->
-
-    <!-- Commented out css styling link hrefs and inlined code from them instead. See bottom.  -->
-  </head>
-
-  <body>
+<body>
     <header>
-      <a href="/"><img src="img/gira.jpg"></a>
-      <p>Mitch Pengilly<br><span>Technomancy Apprentice</span></p>
+        <a href="/"><img src="img/gira.jpg"></a>
+        <p>Mitch Pengilly<br><span>Technomancy Apprentice</span></p>
     </header>
 
     <div class="container">
-      <div class="hero">
-        <strong>Web development is the bee's knees, I say!</strong> I borrowed this template to demonstrate the web development projects I have thus far completed in my Udacity front-end web development class.  Do have a look-see.<br>
-      </div>
+        <div class="hero">
+            <strong>Web development is the bee's knees, I say!</strong> I borrowed this template to demonstrate the web development projects I have thus far completed in my Udacity front-end web development class. Do have a look-see.<br>
+        </div>
 
-      <div class="content">
-        <ul>
-          <li>
-            <img src="img/dishwasher-min.jpg">
-            <a href="http://cowsaysgethyphy.com/Portfolio/mockupfinal.html">The Best and Most Amazing Website, Ever</a>
-            <p>Possibly.</p>
-          </li>
+        <div class="content">
+            <ul>
+                <li>
+                    <img src="img/dishwasher-min.jpg">
+                    <a href="http://cowsaysgethyphy.com/Portfolio/mockupfinal.html">The Best and Most Amazing Website, Ever</a>
+                    <p>Possibly.</p>
+                </li>
 
-          <li>
-            <img src="img/nyar-min.jpg">
-            <a href="http://cowsaysgethyphy.com/Resume/index.html">Resume</a>
-            <p>What my resume would look like, if I were just a bit more Lovecraftian.</p>
-          </li>
+                <li>
+                    <img src="img/nyar-min.jpg">
+                    <a href="http://cowsaysgethyphy.com/Resume/index.html">Resume</a>
+                    <p>What my resume would look like, if I were just a bit more Lovecraftian.</p>
+                </li>
 
-          <li>
-            <img src="img/enemy-bug-min.jpg">
-            <a href="http://cowsaysgethyphy.com/Game/index.html">JS Frogger Game</a>
-            <p>A Frogger-inspired 2D top-down action game with deep character customization.  IGN rates it 7.2 out of 10.</p>
-          </li>
+                <li>
+                    <img src="img/enemy-bug-min.jpg">
+                    <a href="http://cowsaysgethyphy.com/Game/index.html">JS Frogger Game</a>
+                    <p>A Frogger-inspired 2D top-down action game with deep character customization. IGN rates it 7.2 out of 10.</p>
+                </li>
 
-          <li>
-            <img src="views/images/pizzeria_compressed-min.jpg">
-            <a href="http://cowsaysgethyphy.com/views/pizza.html">Cam's Pizzeria Optimization</a>
-            <p>I made the pizzas dance faster.</p>
-          </li>
-        </ul>
-      </div>
+                <li>
+                    <img src="views/images/pizzeria_compressed-min.jpg">
+                    <a href="http://cowsaysgethyphy.com/views/pizza.html">Cam's Pizzeria Optimization</a>
+                    <p>I made the pizzas dance faster.</p>
+                </li>
+            </ul>
+        </div>
 
-      <footer>
-        <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-      </footer>
+        <footer>
+            <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
+        </footer>
     </div>
 
     <script async>
-      (function(w,g){w['GoogleAnalyticsObject']=g;
-      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
-      // Optional TODO: replace with your Google Analytics profile ID.
-      ga('create', 'UA-XXXX-Y');
-      ga('send', 'pageview');
+        (function(w, g) {
+            w['GoogleAnalyticsObject'] = g;
+            w[g] = w[g] || function() {
+                (w[g].q = w[g].q || []).push(arguments)
+            };
+            w[g].l = 1 * new Date();
+        })(window, 'ga');
+        // Optional TODO: replace with your Google Analytics profile ID.
+        ga('create', 'UA-XXXX-Y');
+        ga('send', 'pageview');
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
 
     <!-- Inlined perfmatters.js -->
 
     <script async type="text/javascript">
-function logCRP() {
-  var t = window.performance.timing,
-    dcl = t.domContentLoadedEventStart - t.domLoading,
-    complete = t.domComplete - t.domLoading;
-  var stats = document.getElementById("crp-stats");
-  stats.textContent = 'DCL: ' + dcl + 'ms, onload: ' + complete + 'ms';
-}
+        function logCRP() {
+            var t = window.performance.timing,
+                dcl = t.domContentLoadedEventStart - t.domLoading,
+                complete = t.domComplete - t.domLoading;
+            var stats = document.getElementById("crp-stats");
+            stats.textContent = 'DCL: ' + dcl + 'ms, onload: ' + complete + 'ms';
+        }
 
-window.addEventListener("load", function(event) {
-  logCRP();
-});
+        window.addEventListener("load", function(event) {
+            logCRP();
+        });
     </script>
     <style>
-
-
-
-    /* Inlined style.css */
-          html {
+            /* Inlined CSS and JS, and moved them to the bottom of the file to eliminate render blocking.*/
+        
+        html {
             font-size: 100%;
             overflow-y: scroll;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: none;
-          }
-          body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-          body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
-          a { color: #12C; }
-          a:visited { color: #61C; }
-          a:focus { outline: thin dotted; }
-          a:hover, a:active { color: #c00; outline: 0; }
-          b, strong { font-weight: bold; }
-          pre, code { font-family: monospace, monospace; font-size: 1em; }
-          ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-          img { border: 0; max-width: 100%; }
-          body { background: #fff; }
-          header, footer, .container { max-width: 45em; margin: 0 auto; }
-          header { padding: 0 0.5em; color: #C90B0B; }
-          header img { border-radius: 40px; float: left; }
-          header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-          header p span { font-size: 0.8em; font-weight: normal;}
-          .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+        }
+        
+        body {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.61;
+            font-weight: 400;
+        }
+        
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+        
+        a {
+            color: #12C;
+        }
+        
+        a:visited {
+            color: #61C;
+        }
+        
+        a:focus {
+            outline: thin dotted;
+        }
+        
+        a:hover,
+        a:active {
+            color: #c00;
+            outline: 0;
+        }
+        
+        b,
+        strong {
+            font-weight: bold;
+        }
+        
+        pre,
+        code {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        
+        ul,
+        ol {
+            margin: 1em 0;
+            padding: 0 0 0 20px;
+        }
+        
+        img {
+            border: 0;
+            max-width: 100%;
+        }
+        
+        body {
+            background: #fff;
+        }
+        
+        header,
+        footer,
+        .container {
+            max-width: 45em;
+            margin: 0 auto;
+        }
+        
+        header {
+            padding: 0 0.5em;
+            color: #C90B0B;
+        }
+        
+        header img {
+            border-radius: 40px;
+            float: left;
+        }
+        
+        header p {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding-left: 4em;
+        }
+        
+        header p span {
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        
+        .hero {
+            padding: 2em;
+            background-color: #f8f8f8;
+            font-size: 1.2em;
             border-bottom: 1px solid #ccc;
             border-top: 1px solid #ccc;
-          }
-          .content { padding: 1em 1em; }
-          .content li { list-style-type: none; font-size: 1.1em;}
-          li img { float:left; padding-right: 1em; }
-          li p { font-size: 0.9em; font-style: italic; }
-          footer {
+        }
+        
+        .content {
+            padding: 1em 1em;
+        }
+        
+        .content li {
+            list-style-type: none;
+            font-size: 1.1em;
+        }
+        
+        li img {
+            float: left;
+            padding-right: 1em;
+        }
+        
+        li p {
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        footer {
             padding: 0 0.5em;
             border-top: 1px solid #ccc;
-          }
-          footer span { float: right; font-style: italic; }
-          /* Smartphones (portrait) */
-          @media only screen and (max-width: 480px) {
-            body { font-size: 12px;}
-            header p { padding-left: 4.5em;}
+        }
+        
+        footer span {
+            float: right;
+            font-style: italic;
+        }
+        /* Smartphones (portrait) */
+        
+        @media only screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            header p {
+                padding-left: 4.5em;
+            }
+            /* Inlined print.css */
+            @media print {
+                * {
+                    background: transparent !important;
+                    color: black !important;
+                    text-shadow: none !important;
+                    filter: none !important;
+                    -ms-filter: none !important;
+                }
+                a,
+                a:visited {
+                    color: #444 !important;
+                    text-decoration: underline;
+                }
+                a[href]:after {
+                    content: " (" attr(href) ")";
+                }
+                tr,
+                img {
+                    page-break-inside: avoid;
+                }
+                img {
+                    max-width: 100% !important;
+                }
+                @page {
+                    margin: 0.5cm;
+                }
+                p,
+                h2,
+                h3 {
+                    orphans: 3;
+                    widows: 3;
+                }
+                h2,
+                h3 {
+                    page-break-after: avoid;
+                }
+            }
+            /* Font styling pulled from  https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2 */
+            /* How do you figure out which font listed in the URL below is the same used in the original font declaration?  There are so many. */
+            @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+                unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+    </style>
 
-          /* Inlined print.css */
-          @media print {
-            * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
-            a, a:visited { color: #444 !important; text-decoration: underline; }
-            a[href]:after { content: " (" attr(href) ")"; }
-            tr, img { page-break-inside: avoid; }
-            img { max-width: 100% !important; }
-            @page { margin: 0.5cm; }
-            p, h2, h3 { orphans: 3; widows: 3; }
-            h2, h3{ page-break-after: avoid; }
-          }
+</body>
 
-          /* Font styling pulled from  https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2 */
-          @font-face {
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
-            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-                    }
-              </style>
-
-  </body>
 </html>
